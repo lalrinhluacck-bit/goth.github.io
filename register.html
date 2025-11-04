@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration — iCONNECT 2026</title>
+    <title>Registration — ICET 2026</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        /* ===== Registration Page Styling ===== */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .styled-table thead tr {
+            background-color: var(--primary-color, #004aad);
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .styled-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .account-section {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .account-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-color, #222);
+        }
+
+        .account-section p {
+            margin: 6px 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .account-section strong {
+            color: #000;
+        }
+
+        @media (max-width: 600px) {
+            .styled-table th, .styled-table td {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -53,32 +113,42 @@
             <div class="section-title">
                 <h2>Registration Fees</h2>
             </div>
+
             <table class="styled-table">
                 <thead>
                     <tr>
                         <th>Category</th>
-                        <th>Early Bird (by Dec 15, 2025)</th>
-                        <th>Standard Rate</th>
+                        <th>Indian Author</th>
+                        <th>Foreign Author</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Student Member</td>
-                        <td>250</td>
-                        <td>300</td>
+                        <td>₹2500</td>
+                        <td>$40</td>
                     </tr>
                     <tr>
-                        <td>Professional Member</td>
-                        <td>450</td>
-                        <td>550</td>
+                        <td>Academician Member</td>
+                        <td>₹3000</td>
+                        <td>$50</td>
                     </tr>
                     <tr>
-                        <td>Non-Member</td>
-                        <td>600</td>
-                        <td>700</td>
+                        <td>Delegates</td>
+                        <td>₹1000</td>
+                        <td>$15</td>
                     </tr>
                 </tbody>
             </table>
+
+            <div class="account-section">
+                <h2>Account Details</h2>
+                <p>The fee is to be paid through <strong>NEFT/RTGS</strong> to the following account:</p>
+                <p><strong>Account Number:</strong> 1548050001137</p>
+                <p><strong>Bank:</strong> Punjab National Bank</p>
+                <p><strong>Branch:</strong> Mizoram University (Aizawl)</p>
+                <p><strong>IFSC Code:</strong> PUNB0154820</p>
+            </div>
         </section>
     </main>
 
@@ -89,6 +159,9 @@
 </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Auto year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
-
 </html>
