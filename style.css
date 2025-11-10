@@ -97,7 +97,7 @@ ul {
 }
 
 .logo img {
-  height: 50px;
+  height: 90px;
   transition: height 0.3s ease;
 }
 
@@ -713,4 +713,5 @@ footer .container {
   display: block;
   margin: 0 auto 10px; /* centers image inside the card */
 }
+
 
