@@ -5,14 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Speakers — iCONNECT 2026</title>
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    /* Centered "Under Progress" message */
-    .under-progress {
+    /* Section Title Layout */
+    .page-header h1 {
       text-align: center;
-      padding: 120px 20px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--primary-color, #0a2e5c);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0a2e5c;
+      margin-top: 40px;
+    }
+
+    /* Speakers Section Layout */
+    .speakers-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    /* Vertical Speaker List */
+    .speaker-list {
+      max-width: 750px;
+      margin: auto;
+      margin-top: 40px;
+    }
+
+    .speaker-item {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 40px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+
+    .speaker-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .speaker-item img {
+      width: 140px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #0a2e5c;
+    }
+
+    .speaker-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0a2e5c;
+      margin: 0;
+      text-align: left;
+    }
+
+    .speaker-role {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 6px;
+      color: #444;
+      text-align: left;
+    }
+
+    /* Responsive Fix */
+    @media (max-width: 600px) {
+      .speaker-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .speaker-item img {
+        width: 160px;
+        height: 200px;
+      }
+
+      .speaker-name, .speaker-role {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -27,17 +99,18 @@
       <nav class="navbar">
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
+          <li class="dropdown">
             <a href="#" class="no-click">Committee</a>
             <ul class="dropdown-menu">
               <li><a href="OC.html">Organizing Committee</a></li>
               <li><a href="international.html">International Committee</a></li>
               <li><a href="national.html">National Committee</a></li>
-              <li><a href="Others.html">Other Committee</a></li>
+              <li><a href="Others.html">Other Committees</a></li>
             </ul>
-        </li>
+          </li>
 
-        <li><a href="speaker.html">Speaker</a></li>
+          <li><a href="speaker.html">Speaker</a></li>
+          
           <li class="dropdown">
             <a href="#" class="no-click">Authors</a>
             <ul class="dropdown-menu">
@@ -65,8 +138,44 @@
       </div>
     </section>
 
-    <section class="under-progress container reveal">
-      <p>Under Progress</p>
+    <!-- Vertical Speakers Section -->
+    <section class="speakers-section container reveal">
+
+      <div class="speaker-list">
+
+        <div class="speaker-item">
+          <img src="assets/sundar.jpg" alt="Professor Dr. S. Sundar">
+          <div>
+            <h3 class="speaker-name">Professor. Dr. S. Sundar</h3>
+            <p class="speaker-role">Director, NIT Mizoram</p>
+          </div>
+        </div>
+
+        <div class="speaker-item">
+          <img src="assets/subrahmanyam.jpg" alt="Prof. Dr. V. V. Subrahmanyam">
+          <div>
+            <h3 class="speaker-name">Prof. Dr. V. V. Subrahmanyam</h3>
+            <p class="speaker-role">IGNOU, New Delhi</p>
+          </div>
+        </div>
+
+        <div class="speaker-item">
+          <img src="assets/venkatesh.jpg" alt="Prof. Dr Venkatesh Chennam Vijay">
+          <div>
+            <h3 class="speaker-name">Prof. Dr. Venkatesh Chennam Vijay</h3>
+            <p class="speaker-role">Birmingham City University, UK</p>
+          </div>
+        </div>
+
+        <div class="speaker-item">
+          <img src="assets/balas.jpg" alt="Prof. Dr Balas Valentina Emilia">
+          <div>
+            <h3 class="speaker-name">Prof. Dr. Balas Valentina Emilia</h3>
+            <p class="speaker-role">University of Aurel Vlaicu, Romania</p>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
@@ -80,9 +189,8 @@
   <!-- Scripts -->
   <script src="script.js"></script>
   <script>
-    // Auto-update year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
-
